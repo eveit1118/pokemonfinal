@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main>
+      <select name="dropdown" id="dropdown" onchange="run()">
+        <option value="1">Height, Weight, Type</option>
+        <option value="2">Generations</option>
+        <option value="3">Gender Ratio</option>
+        <option value="4">HP</option>
+      </select>
+      <script src="data.js"></script> 
+      <script id="please" src="sketch.js"></script> 
+    
+      <img style="width: 300px; 
+      position: absolute;
+      top: 50px;
+      right: 50px;" 
+      src="images/poekeke.png">
+      <div style="position: absolute;margin:200px 10px 0px 1175px; 
+      font-size: 20px;
+      color: rgb(0);"> <b> Height, Weight, Type </b>     </div>
+      <div style="margin:235px 75px 0px 1200px; 
+            font-size: 15px;
+            position: absolute;
+            color: rgb(0);"> xPos correlates with the Pokemon's pokedex number     </div>
+            <img style="width: 25px; 
+            position: absolute;
+            left: 1170px;
+            top: 260px;" 
+            src="images/pokeball.png">
+      <div style="margin:280px 75px 0px 1200px; 
+      font-size: 15px;
+      position: absolute;
+      color: rgb(0);"> yPos correlates with Pokemon's height    </div>
+            <img style="width: 25px; 
+            position: absolute;
+            left: 1170px;
+            top: 305px;" 
+            src="images/pokeball.png">
+            <div style="margin:325px 75px 0px 1200px; 
+            font-size: 15px;
+            position: absolute;
+            color: rgb(0);"> Size correlates with Pokemon's weight   </div>
+                        <img style="width: 25px; 
+            position: absolute;
+            left: 1170px;
+            top: 350px;" 
+            src="images/pokeball.png">
+            <div style="margin:370px 75px 0px 1200px; 
+            font-size: 15px;
+            position: absolute;
+            color: rgb(0);"> Color correlates with Pokemon's type   </div>
+            <img style="width: 25px; 
+            position: absolute;
+            left: 1170px;
+            top: 395px;" 
+            src="images/pokeball.png">
+
+            <div style="position: absolute;margin:420px 10px 0px 1200px; 
+              font-size: 20px;
+              color: rgb(0);"> <b> Generations </b>     </div>
+              <div style="margin:455px 75px 0px 1200px; 
+                    font-size: 15px;
+                    position: absolute;
+                    color: rgb(0);"> xPos correlates with the Pokemon's generation     </div>
+                    <img style="width: 25px; 
+                    position: absolute;
+                    left: 1170px;
+                    top: 480px;" 
+                    src="images/pokeball.png">
+              <div style="margin:500px 75px 0px 1200px; 
+              font-size: 15px;
+              position: absolute;
+              color: rgb(0);"> Color correlates with Pokemon's type    </div>
+                    <img style="width: 25px; 
+                    position: absolute;
+                    left: 1170px;
+                    top: 525px;" 
+                    src="images/pokeball.png">
+                    
+                    
+                    <div style="position: absolute;margin:550px 10px 0px 1190px; 
+      font-size: 20px;
+      color: rgb(0);"> <b> Gender Ratio </b>     </div>
+      <div style="margin:585px 75px 0px 1200px; 
+            font-size: 15px;
+            position: absolute;
+            color: rgb(0);"> xPos correlates with the Pokemon's gender ratio in the wild    </div>
+            <img style="width: 25px; 
+            position: absolute;
+            left: 1170px;
+            top: 605px;" 
+            src="images/pokeball.png">
+      <div style="margin:640px 75px 0px 1200px; 
+      font-size: 15px;
+      position: absolute;
+      color: rgb(0);"> yPos correlates with Pokemon's Pokedex number    </div>
+            <img style="width: 25px; 
+            position: absolute;
+            left: 1170px;
+            top: 665px;" 
+            src="images/pokeball.png">
+            <div style="margin:685px 75px 0px 1200px; 
+            font-size: 15px;
+            position: absolute;
+            color: rgb(0);"> Color correlates with dominat gender, pink for female, blue for male, gray for even, and black for unknown   </div>
+                        <img style="width: 25px; 
+            position: absolute;
+            left: 1170px;
+            top: 710px;" 
+            src="images/pokeball.png">
+
+            <div style="position: absolute;margin:765px 10px 0px 1240px; 
+            font-size: 20px;
+            color: rgb(0);"> <b> HP </b>     </div>
+            <div style="margin:795px 75px 0px 1200px; 
+                  font-size: 15px;
+                  position: absolute;
+                  color: rgb(0);"> xPos correlates with the Pokemon's attack stat     </div>
+                  <img style="width: 25px; 
+                  position: absolute;
+                  left: 1170px;
+                  top: 820px;" 
+                  src="images/pokeball.png">
+            <div style="margin:840px 75px 0px 1200px; 
+            font-size: 15px;
+            position: absolute;
+            color: rgb(0);"> yPos correlates with Pokemon's defense stat    </div>
+                  <img style="width: 25px; 
+                  position: absolute;
+                  left: 1170px;
+                  top: 865px;" 
+                  src="images/pokeball.png">
+                  <div style="margin:885px 75px 0px 1200px; 
+                  font-size: 15px;
+                  position: absolute;
+                  color: rgb(0);"> Color correlates with Pokemon's max health, green is higher red is lower   </div>
+                              <img style="width: 25px; 
+                  position: absolute;
+                  left: 1170px;
+                  top: 910px;" 
+                  src="images/pokeball.png">
+                 
+
+          
+    </main>
+  </body>
+</html>
